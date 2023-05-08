@@ -9,14 +9,23 @@
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&family=Playfair+Display&family=Poppins:wght@300&display=swap" rel="stylesheet">
-</head>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&family=Lato:ital,wght@1,300&family=Merriweather:wght@300&family=Playfair+Display&family=Poppins:wght@300&display=swap" rel="stylesheet"> <script src="./Assets/particles.js"></script>
+    <script src="https://www.jqueryscript.net/demo/Minimal-3D-Image-Rotator-with-jQuery-CSS3-Cascade-Slider/cascade-slider.js"></script>
+       <!-- Compiled and minified CSS -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-<body>
-    <div class="lock-screen">
-        <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:100,300' rel='stylesheet' type='text/css'>
-        <div class="cover super-centered-container">
+       <!-- Compiled and minified JavaScript -->
+       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">  
+    </head>
+    
+    <body>
+        <div class="lock-screen">
+            <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:100,300' rel='stylesheet' type='text/css'>
+            <div class="cover super-centered-container">
             <canvas id="can">Get a browser</canvas>
             <div class="overlay-static">
                 <div class="inline-blocks">
@@ -28,12 +37,46 @@
             </div>
         </div>
         <div class="password-enter">
-            <h3>You will be born in</h3>
-            <h1 id="secons">000 s</h1>
-            <!-- <input type="password" name="lock-pass" id="lock-pass" placeholder="Passcode...">
-            <button id="enter-btn">ENTER</button> -->
+            <!-- <h3>You will be born in</h3>
+            <h1 id="secons">000 s</h1> -->
+            <input type="password" name="lock-pass" id="lock-pass" placeholder="Passcode...">
+                <button id="enter-btn" onclick="displayPage()">ENTER</button>
+            </div>
+        </div>
+        <div class="mainB">
+            <div class="li" onmousemove="MouseEnter(event)">
+                <div class="holder" onmousemove="MouseEnter(event)" onmouseout="">
+                    <span class="finder"></span>
+                    
+                    <h2 class="hidden">I Love You ❤, Baby.</h2>
+                    <p>Happy Birthday, Baby.</p>
+                </div>
+        </div>
+        <div class="li">
+           <div class="">
+            <div class="row custom-font">
+                <div class="col s6">
+                    <h1>Baby, you are the best thing that ever happened to me. From the day you came into my life, I started to change. Like I don't know how to explain it but you make me a better person and I'm so grateful for that. Today is your birthday, and I wanna tell you that you are the most beautiful girl in my eyes, no matter what you say and I'm so happy that you are in my life. I work on myself every day to become the man you desire, I'll become that because I want to spend my life with you baby. And I know you want the same and I'll work really hard for that.
+                        See, baby you make me feel so comfortable around you and when you get angry with me and I try to convince you, I know you like that a lot. I know you like me to say sorry and understand you and that's a good thing. I want you to know that, I'll always be there for you, no matter what. And I wanna tell you that baby, you are doing good and I'm really proud of you. So, keep going okay, don't give up. Happy birthday baby, I love you.
+                                                                                                                                                                                                              your Dumbass</h1>
+                </div>
+                <div class="col s6 custom-img-holder">
+                    <img src="./Assets/img6.jpeg" alt="" data-tilt data-tilt-glare data-tilt-max-glare="0.8" class="custom-img">
+                </div>
+            </div>
         </div>
     </div>
+    <div  class="li">
+        <div id="particles-js"></div>
+        <img class="materialboxed" id="carosel-img" data-tilt src="./Assets/img1.jpeg">
+        <div class="controls row">
+            <div class="btn col s12" onclick="prevImg()">Prev</div>
+            <div class="btn col s12" onclick="nextImg()">Next</div>
+        </div>
+    </div>
+    <div class="footermy">For my Love, your dumbass</div>
+</div>
+<script src="./vanilla-tilt.min.js"></script>
 </body>
 
 </html>

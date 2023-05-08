@@ -110,7 +110,7 @@ function isOnHeart(x,y){
 }
 
 function displayPage(){
-    _org_p = 1234
+    _org_p = 0926
     _p = document.getElementById('lock-pass').value 
     if(_p == _org_p){
         document.getElementsByClassName('lock-screen')[0].classList.add('hide')
@@ -125,7 +125,70 @@ function updateTimer(){
     sec = sec/1000
     document.getElementById('secons').innerHTML = `${Math.floor(sec)} s`
 }
-window.onload = function(){
-    setInterval(updateTimer,1000)
+// window.onload = function(){
+//     setInterval(updateTimer,1000)
 
+// }
+
+
+
+function MouseEnter(e){
+  var finder = document.getElementsByClassName('finder')[0];
+  var x = e.clientX - 125;
+  var y = e.clientY - 125;
+  finder.style.top = y + "px";
+  finder.style.left = x + "px";
+}
+
+
+/* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+particlesJS.load('particles-js', 'Assets/particles.json', function() {
+  console.log('callback - particles.js config loaded');
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.carousel');
+  var instances = M.Carousel.init(elems, {});
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.materialboxed');
+  var instances = M.Materialbox.init(elems, {});
+});
+
+
+
+images = [
+  'img1.jpeg',
+  'img2.jpeg',
+  'img3.jpeg',
+  'img4.jpeg',
+  'img5.jpeg',
+  'img7.jpeg',
+  'img8.jpeg',
+  'img9.jpeg',
+  'img10.jpeg',
+
+]
+_currentImg = 1
+function nextImg(){
+  if(_currentImg >= images.length){
+    _currentImg = 1
+  }
+  else{
+    _currentImg++;
+    document.getElementById('carosel-img').src = 'Assets/'+ images[_currentImg]
+  }
+}
+
+function prevImg(){
+  if(_currentImg <= 0){
+    _currentImg = 10
+
+  }
+  else{
+    _currentImg--;
+    document.getElementById('carosel-img').src ='Assets/'+ images[_currentImg]
+  }
 }
